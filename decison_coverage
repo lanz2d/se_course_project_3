@@ -1,0 +1,19 @@
+//decision coverage
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TritypeDecisionTest {
+
+//测试决策if (Side1 <= 0 || Side2 <= 0 || Side3 <= 0)部分
+
+    @Test
+    public void test1(){
+        assertEquals(4,Tritype.Triang(0, 4, 5));
+    }
+
+    @Test
+     public void test1(){
+        assertEquals(4,Tritype.Triang(3, 4, 5));
+    }
+}
