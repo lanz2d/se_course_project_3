@@ -13,22 +13,22 @@ public class TritypeDecisionTest {
     }
 
     @Test
-     public void test1(){
+     public void test2(){
         assertEquals(0,Tritype.Triang(3, 4, 5));
     }
 
     @Test
-    public void test1(){
+    public void test3(){
         assertEquals(4,Tritype.Triang(3, 0, 0));
     }
 
     @Test
-    public void test1(){
+    public void test4(){
         assertEquals(4,Tritype.Triang(0, 0, 5));
     }
 
     @Test
-    public void test1(){
+    public void test5(){
         assertEquals(4,Tritype.Triang(0, 4, 0));
     }
 }
