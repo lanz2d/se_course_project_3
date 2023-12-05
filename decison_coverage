@@ -14,6 +14,6 @@ public class TritypeDecisionTest {
 
     @Test
      public void test1(){
-        assertEquals(4,Tritype.Triang(3, 4, 5));
+        assertEquals(1,Tritype.Triang(3, 4, 5));
     }
 }
