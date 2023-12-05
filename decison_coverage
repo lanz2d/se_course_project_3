@@ -13,7 +13,7 @@ public class TritypeDecisionTest {
     }
 
     @Test
-     public void test1(){
+     public void test2(){
         assertEquals(1,Tritype.Triang(3, 4, 5));
     }
 }
