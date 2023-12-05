@@ -1,0 +1,17 @@
+//mutant two
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TritypeDecisionTest {
+
+    @Test
+    public void test1(){
+        assertEquals(1,Tritype.Triang(3, 4, 5));
+    }
+
+    @Test
+     public void test2(){
+        assertEquals(2,Tritype.Triang(3, 3, 4));
+    }
+}
