@@ -1,0 +1,62 @@
+package com.selab.tritypejunittest;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class TritypeTest {
+    @Test
+    public void test1(){
+        assertEquals(4,Tritype.Triang(0, 4, 5));
+    }
+    @Test
+    public void test2() {
+        assertEquals(1, Tritype.Triang(3, 4, 5));
+    }
+    @Test
+    public void test3() {
+        assertEquals(2, Tritype.Triang(3, 3, 5));
+    }
+    @Test
+    public void test4() {
+        assertEquals(2, Tritype.Triang(3, 4, 3));
+    }
+    @Test
+    public void test5() {
+        assertEquals(2, Tritype.Triang(3, 5, 5));
+    }
+    @Test
+    public void test6() {
+        assertEquals(3, Tritype.Triang(3, 3, 3));
+    }
+    @Test
+    public void test7() {
+        assertEquals(4, Tritype.Triang(3, 4, 8));
+    }
+    @Test
+    public void test8() {
+        assertEquals(4, Tritype.Triang(3, 3, 8));
+    }
+    @Test
+    public void testMain() {
+        String input = "3\n4\n5\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        Tritype.main(new String[0]);
+        System.setIn(System.in);
+    }
+    @Test
+    public void testGetN() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        String input = "42\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        Method getNMethod = Tritype.class.getDeclaredMethod("getN");
+        getNMethod.setAccessible(true);
+        int result = (int) getNMethod.invoke(null);
+        assertEquals(42, result);
+        System.setIn(System.in);
+    }
+}
